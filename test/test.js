@@ -11,6 +11,7 @@ let should = chai.should();
 chai.use(chaiHttp);
 
 //Our parent block
+
 describe('patching', () => {
 let token='';
   describe('/POST ', () => {
@@ -50,7 +51,10 @@ let token='';
 			  	res.should.have.status(200);
 			  	res.body.should.be.a('object');
 		      done();
-		    });
+
+			});
+			
+
 	  });
 	  it('it should not post for patching without token ', (done) => {
 		  let body = {
@@ -73,9 +77,21 @@ let token='';
 				  done();
 			  });
 	  });
+
+	  it('it should logout the user ', (done) => {
+
+		  chai.request(server)
+			  .get('/api/v1/signout')
+			  .end((err, res) => {
+				  res.should.have.status(401);
+
+				  done();
+			  });
+	  });
+
   });
  /*
   * Test the /GET/:id route
   */
 });
-  
+
