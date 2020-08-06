@@ -11,7 +11,8 @@ let should = chai.should();
 chai.use(chaiHttp);
 
 //Our parent block
-describe('Books', () => {
+
+describe('patching', () => {
 let token='';
   describe('/POST ', () => {
 	  it('it should be able login', (done) => {
@@ -50,8 +51,10 @@ let token='';
 			  	res.should.have.status(200);
 			  	res.body.should.be.a('object');
 		      done();
+
 			});
 			
+
 	  });
 	  it('it should not post for patching without token ', (done) => {
 		  let body = {
@@ -74,6 +77,7 @@ let token='';
 				  done();
 			  });
 	  });
+
 	  it('it should logout the user ', (done) => {
 
 		  chai.request(server)
@@ -84,9 +88,10 @@ let token='';
 				  done();
 			  });
 	  });
+
   });
  /*
   * Test the /GET/:id route
   */
 });
-  
+
