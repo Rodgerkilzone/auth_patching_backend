@@ -11,9 +11,8 @@ router.post('/patch',  passport.authenticate('jwt', { session: false }), functio
     
     try{
 
-        let result = patch(req.body.json, req.body.patch)
+        let result = patch(req.body.json, req.body.patch);
         res.json({ success: true, result: result});
-        patch(req.body.json, req.body.patch)
     }
         catch(e){
         return res.status(500).json({success:false,msg:{ error: e.error || 'internal server error' }})
