@@ -11,7 +11,7 @@ let should = chai.should();
 chai.use(chaiHttp);
 
 //Our parent block
-describe('Books', () => {
+describe('patching', () => {
 let token='';
   describe('/POST ', () => {
 	  it('it should be able login', (done) => {
