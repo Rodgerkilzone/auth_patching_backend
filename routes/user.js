@@ -5,7 +5,7 @@ var jwt = require('jsonwebtoken');
 var jsonpatch = require('json-patch')
 var router = express.Router();
 
-router.post('/patch', passport.authenticate('jwt', { session: false }),  function (req, res) {
+router.post('/patch',  passport.authenticate('jwt', { session: false }), function (req, res) {
     try{
 
         let result = jsonpatch.apply(req.body.json, req.body.patch);
