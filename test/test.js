@@ -50,7 +50,8 @@ let token='';
 			  	res.should.have.status(200);
 			  	res.body.should.be.a('object');
 		      done();
-		    });
+			});
+			
 	  });
 	  it('it should not post for patching without token ', (done) => {
 		  let body = {
@@ -67,6 +68,16 @@ let token='';
 		  chai.request(server)
 			  .post('/api/v1/user/patch')
 			  .send(body)
+			  .end((err, res) => {
+				  res.should.have.status(401);
+
+				  done();
+			  });
+	  });
+	  it('it should logout the user ', (done) => {
+
+		  chai.request(server)
+			  .get('/api/v1/signout')
 			  .end((err, res) => {
 				  res.should.have.status(401);
 
