@@ -1,13 +1,37 @@
-# node-express-mongoose-passport-jwt-rest-api-auth
+# auth_patching_backend
+Authetication and patching backend apis
 
-This source code is part of tutorials [Node, Express, Mongoose and Passport.js REST API Authentication](https://www.djamware.com/post/58eba06380aca72673af8500/node-express-mongoose-and-passportjs-rest-api-authentication)
+[![Build Status](https://travis-ci.org/Rodgerkilzone/My-Diary.svg?branch=master)](https://travis-ci.org/Rodgerkilzone/auth_patching_backend)
 
-Before run this example, make sure you have installed and running MongoDB.
+## Endpoints
 
-Step to run locally:
+| Functionality        |    Method     |         Endpoint                   |
+| :------------------- |:-------------:| ----------------------------------:|
+| Login                | POST           | /api/v1/signin                     |
+| Patch json           | POST           | /api/v1/user/patch                 |
+| Logout               | GET            | /api/v1/signout                     |
 
-* Clone this repo
-* Run 'npm install'
-* Run 'npm start'
+## How to setup it up:
 
-If you think this source code is useful, it will be great if you just give it star or just buy me a cup of cofee [![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=Q5WK24UVWUGBN)
+To set it up in your machine:
+
+1.install node js
+
+2.install npm
+
+Clone this repository:
+
+git clone https://github.com/Rodgerkilzone/auth_patching_backend.git
+
+
+## install dependancies:
+npm install
+
+## Run the application:
+npm start
+
+## Run the test:
+npm test
+
+
+
